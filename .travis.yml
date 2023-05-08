@@ -6,7 +6,9 @@ python:
   - "3.9"
 install:
   - pip install pythonanywhere
-script: python -m unittest test_hello.py
+script: 
+  - python -m unittest test_hello.py
+  - python deploy_flask_to_pythonanywhere.py
 
 deploy:
   provider: script
