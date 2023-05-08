@@ -5,3 +5,11 @@ python:
   - "3.8"
   - "3.9"
 script: python -m unittest test_hello.py
+
+deploy:
+  provider: script
+  script: bash deploy_pythonanywhere.sh
+  on:
+    branch: master
+    python: 3.8
+  skip_cleanup: true
