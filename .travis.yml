@@ -8,7 +8,7 @@ script: python -m unittest test_hello.py
 
 deploy:
   provider: script
-  script: bash deploy_pythonanywhere.sh
+  script: ./deploy_pythonanywhere.sh
   on:
     branch: master
     python: 3.8
